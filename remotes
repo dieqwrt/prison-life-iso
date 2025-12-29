@@ -1,0 +1,16 @@
+-- interact remote (need to be close)
+local args = {
+	workspace:WaitForChild("Prison_ITEMS"):WaitForChild("giver"):WaitForChild("Dinner"):WaitForChild("ITEMPICKUP")
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("InteractWithItem"):InvokeServer(unpack(args))
+-- shoot remote
+local args = {
+	{
+		{
+			vector.create(-936.6768798828125, 95.62886047363281, 2049.991455078125),
+			vector.create(-928.3441162109375, 91.12887573242188, 2050.08740234375),
+			workspace:WaitForChild("Part")
+		}
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("GunRemotes"):WaitForChild("ShootEvent"):FireServer(unpack(args))
